@@ -225,7 +225,6 @@
   --grid-hero: 1.08fr 0.92fr;
   --grid-commit-layout: var(--grid-1col);
   --grid-offers-layout: 0.27fr 0.73fr;
-  --grid-branches-layout: 0.28fr 0.72fr;
   --grid-footer: 0.9fr 1.1fr 1fr;
   --grid-1col: 1fr;
   --grid-2col: repeat(2, 1fr);
@@ -1900,66 +1899,23 @@ button {
   color: var(--color-navy-900);
 }
 
-.branches-layout {
-  display: grid;
-  grid-template-columns: var(--grid-branches-layout);
-  gap: var(--space-6);
-  align-items: stretch;
-}
-
-.hq-card {
+.branches-card {
   background: var(--color-white);
   border: var(--border-card);
   border-radius: var(--radius-xl);
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-8) var(--space-7);
   box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hq-card__badge-wrap {
-  margin-bottom: var(--space-4);
-}
-
-.hq-card__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1-5);
-  background: var(--grad-btn-red);
-  color: var(--color-white);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-extrabold);
-  padding: var(--space-1-5) var(--space-4-5);
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  box-shadow: var(--shadow-btn-red);
-}
-
-.hq-card__address {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-extrabold);
-  color: var(--color-navy-900);
-  margin-bottom: var(--space-2);
-}
-
-.hq-card__note {
-  font-size: var(--fs-xs);
-  color: var(--color-slate-600);
 }
 
 .branches-grid {
   display: grid;
   grid-template-columns: var(--grid-4col);
-  gap: var(--space-4-5);
+  gap: var(--space-6) var(--space-5);
 }
 
-.branch-card {
-  background: var(--color-white);
-  border: var(--border-card);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4-5);
-  box-shadow: var(--shadow-card);
+.branch-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .branch-card__head {
@@ -2846,8 +2802,7 @@ button {
 @media (max-width: 1080px) {
   .hero-section__grid,
   .commitments-section__layout,
-  .offers-section__layout,
-  .branches-layout {
+  .offers-section__layout {
     grid-template-columns: var(--grid-1col);
   }
 
@@ -2990,6 +2945,10 @@ button {
   .offers-grid,
   .branches-grid {
     grid-template-columns: var(--grid-1col);
+  }
+
+  .branches-card {
+    padding: var(--space-6) var(--space-4-5);
   }
 
   /* Hero Mobile Layout: Ảnh hiển thị trước Highlight Box, toàn bộ văn bản căn lề trái */
