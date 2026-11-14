@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { selector: '.section-header', type: 'reveal-up', stagger: false },
     { selector: '.hero-section__content', type: 'reveal-up', stagger: false },
     { selector: '.hero-section__visual', type: 'reveal-fade', stagger: false },
-    { selector: '.hero-trust-bar', type: 'reveal-up', stagger: false },
-    { selector: '.commitments-section__photo-col', type: 'reveal-fade', stagger: false },
     { selector: '.commitment-card', type: 'reveal-up', stagger: true, parent: '.commitments-grid' },
     { selector: '.services-grid-top .service-card', type: 'reveal-up', stagger: true, parent: '.services-grid-top' },
     { selector: '.services-grid-bottom .service-card', type: 'reveal-up', stagger: true, parent: '.services-grid-bottom' },

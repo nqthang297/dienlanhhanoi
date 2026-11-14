@@ -223,7 +223,7 @@
 
   /* Grid Templates & Column Widths */
   --grid-hero: 1.08fr 0.92fr;
-  --grid-commit-layout: 0.33fr 0.67fr;
+  --grid-commit-layout: var(--grid-1col);
   --grid-offers-layout: 0.27fr 0.73fr;
   --grid-branches-layout: 0.28fr 0.72fr;
   --grid-footer: 0.9fr 1.1fr 1fr;
@@ -1911,28 +1911,21 @@ button {
   background: var(--color-white);
   border: var(--border-card);
   border-radius: var(--radius-xl);
-  padding: var(--space-5);
+  padding: var(--space-6) var(--space-5);
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.hq-card__media {
-  position: relative;
-  margin-bottom: var(--space-6);
-}
-
-.hq-card__img {
-  width: var(--size-full);
-  border-radius: var(--radius-lg);
+.hq-card__badge-wrap {
+  margin-bottom: var(--space-4);
 }
 
 .hq-card__badge {
-  position: absolute;
-  left: var(--pos-half);
-  bottom: calc(var(--space-3-5) * -1);
-  transform: translateX(var(--translate-center-x));
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
   background: var(--grad-btn-red);
   color: var(--color-white);
   font-size: var(--fs-xs);
@@ -2210,7 +2203,7 @@ button {
   transform: translateY(2px);
 }
 
-/* CTA Banner inside Gallery */
+/* CTA Banner inside Gallery / Hero */
 .gallery-cta-banner {
   background: var(--grad-ice-section);
   border-radius: var(--radius-2xl);
@@ -2221,6 +2214,10 @@ button {
   justify-content: space-between;
   gap: var(--space-6);
   box-shadow: var(--shadow-card);
+}
+
+.hero-section .gallery-cta-banner {
+  margin-top: var(--space-12);
 }
 
 .gallery-cta-banner__title {
@@ -3059,6 +3056,10 @@ button {
   .hero-section__cta {
     order: 7;
     align-self: flex-start;
+  }
+
+  .hero-section .gallery-cta-banner {
+    margin-top: var(--space-8);
   }
 
   /* ==================== SECTION 4: BẢNG SO SÁNH (MOBILE) ==================== */
