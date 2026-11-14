@@ -1,0 +1,115 @@
+HUONG DAN SU DUNG ASSET CHO LANDING PAGE DIEN LANH HA NOI
+=========================================================
+
+I. CAU TRUC THU MUC
+-------------------
+00_REFERENCES        : anh tham chieu tong the va cac section mau.
+01_PEOPLE            : ky thuat vien / nhan vat.
+02_APPLIANCES        : thiet bi, san pham.
+03_BRAND_MISC        : asset thuong hieu, bao hanh, xe, cua hang.
+04_BACKGROUNDS       : nen section lon.
+05_GRAPHIC_ELEMENTS  : graphic cong cong, wave, oval, skyline, highlight.
+06_PREVIEWS          : anh xem nhanh / collage tong hop.
+
+II. ANH DUNG O DAU / SECTION NAO
+--------------------------------
+A. HERO SECTION (phan dau trang)
+- 04_BACKGROUNDS/13-background-hero-light.png
+  -> nen full-width cho hero.
+- 05_GRAPHIC_ELEMENTS/18-tilted-blue-oval-with-crescent-arcs.png
+  -> oval lon dat sau lung ky thuat vien nhu mau ban gui.
+- 05_GRAPHIC_ELEMENTS/21-blue-crescent-corner-swoosh.png
+  -> them o goc phai tren / trai duoi de tao net cong nhan dien.
+- 01_PEOPLE/01-hero-technician.png
+  -> nhan vat chinh o hero.
+- 02_APPLIANCES/05-appliance-collection.png
+  -> cum thiet bi ben phai hero.
+  -> neu muon tach rieng thi dung 09, 10, 11, 12, 17.
+- 05_GRAPHIC_ELEMENTS/23-golden-yellow-highlight-swash.png
+  -> dat sau cac tu khoa nhan manh trong H1/H2.
+- 05_GRAPHIC_ELEMENTS/25-icy-blue-glossy-orb-with-curved-accent.png
+  -> co the thay the hoac bo sung cho oval nho / image frame.
+
+B. SECTION "6 CAM KET VANG"
+- 01_PEOPLE/03-technician-cleaning-air-conditioner.png
+  -> hinh minh hoa ben trai.
+- 05_GRAPHIC_ELEMENTS/22-soft-blue-gradient-oval-panel.png
+  -> nen oval sau nhan vat / sau khoi anh.
+- 05_GRAPHIC_ELEMENTS/23-golden-yellow-highlight-swash.png
+  -> dat sau tu "Vang".
+- 05_GRAPHIC_ELEMENTS/21-blue-crescent-corner-swoosh.png
+  -> bo sung duong cong trang tri.
+
+C. SECTION "7 DICH VU COT LOI"
+- 04_BACKGROUNDS/14-background-services-blue.png
+  -> nen xanh cho ca section.
+- 05_GRAPHIC_ELEMENTS/24-icy-blue-skyline-haze.png
+  -> overlay duoi cung cua section xanh neu muon skyline nhe.
+- 05_GRAPHIC_ELEMENTS/20-glossy-blue-cityscape-banner.png
+  -> dung lam panel nen cho block content, banner, CTA, hoac box lon.
+- 02_APPLIANCES/09-air-conditioner.png
+  -> card dich vu dieu hoa.
+- 02_APPLIANCES/11-water-heater.png
+  -> card dich vu binh nong lanh.
+- 02_APPLIANCES/12-front-load-washing-machine.png
+  -> card dich vu may giat.
+- 02_APPLIANCES/10-refrigerator.png
+  -> card dich vu tu lanh / tu dong.
+- 02_APPLIANCES/17-water-purifier.png
+  -> card dich vu may loc nuoc.
+- 01_PEOPLE/04-technician-installing-outdoor-unit.png
+  -> card thao lap / di doi / lap dat.
+- 03_BRAND_MISC/07-service-van.png
+  -> card van chuyen, di doi, hoac trust signal.
+- 03_BRAND_MISC/08-storefront.png
+  -> card ve he thong co so / thuong hieu.
+
+D. SECTION SO SANH / QUY TRINH / FAQ / FOOTER
+- 05_GRAPHIC_ELEMENTS/19-layered-blue-wave-footer.png
+  -> dung giua cac section lam song ngan cach.
+- 05_GRAPHIC_ELEMENTS/16-skyline-overlay.png
+  -> skyline rong cho cuoi section.
+- 05_GRAPHIC_ELEMENTS/24-icy-blue-skyline-haze.png
+  -> skyline mo nhe cho footer / section thong tin.
+- 03_BRAND_MISC/06-warranty-certificate.png
+  -> section bao hanh, quy trinh, trust.
+- 03_BRAND_MISC/07-service-van.png
+  -> section quy trinh den tan nha / chi nhanh.
+- 01_PEOPLE/02-customer-support-technician.png
+  -> section hotline / tu van / lien he.
+
+III. MUC DICH TUNG FILE NGAN GON
+--------------------------------
+01-hero-technician.png                  : ky thuat vien hero.
+02-customer-support-technician.png     : ky thuat vien/hotline.
+03-technician-cleaning-air-conditioner.png : ve sinh / sua dieu hoa.
+04-technician-installing-outdoor-unit.png  : lap dat dan nong.
+05-appliance-collection.png            : cum thiet bi.
+06-warranty-certificate.png            : phieu bao hanh.
+07-service-van.png                     : xe ky thuat.
+08-storefront.png                      : cua hang / tru so.
+09-air-conditioner.png                 : dieu hoa tach rieng.
+10-refrigerator.png                    : tu lanh tach rieng.
+11-water-heater.png                    : binh nong lanh tach rieng.
+12-front-load-washing-machine.png      : may giat tach rieng.
+13-background-hero-light.png           : nen hero.
+14-background-services-blue.png        : nen section xanh.
+15-decorative-wave-overlay.png         : wave trang tri trong suot.
+16-skyline-overlay.png                 : skyline trong suot.
+17-water-purifier.png                  : may loc nuoc.
+18-tilted-blue-oval-with-crescent-arcs.png : oval cong lon giong mau ban gui.
+19-layered-blue-wave-footer.png        : wave day trang tri rong.
+20-glossy-blue-cityscape-banner.png    : panel xanh bo goc co skyline.
+21-blue-crescent-corner-swoosh.png     : swoosh cong o goc.
+22-soft-blue-gradient-oval-panel.png   : oval/panel mem.
+23-golden-yellow-highlight-swash.png   : vach highlight vang.
+24-icy-blue-skyline-haze.png           : skyline mo rong.
+25-icy-blue-glossy-orb-with-curved-accent.png : orb/oval tron mem.
+
+IV. LUU Y KHI CODE
+------------------
+- Uu tien dung PNG nen trong suot cho cac doi tuong / graphic.
+- Asset nen lon (13, 14) co the dung lam background-image CSS.
+- Asset 15, 16, 18, 19, 21, 22, 24, 25 hop de absolute position va chong len cac khoi.
+- Neu can toi uu toc do, co the chuyen mot so shape trang tri sang WebP sau khi code on dinh.
+- Thu tu dung file khuyen nghi: background -> graphic decor -> anh nhan vat/thiet bi -> text/UI.
