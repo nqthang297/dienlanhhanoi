@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { selector: '.comparison-table-wrap', type: 'reveal-up', stagger: false },
     { selector: '.comparison-section .cta-group', type: 'reveal-up', stagger: false },
     { selector: '.process-card', type: 'reveal-up', stagger: true, parent: '.process-grid' },
+    { selector: '.process-section .cta-group', type: 'reveal-up', stagger: false },
     { selector: '.offers-section__tech-col', type: 'reveal-fade', stagger: false },
     { selector: '.offer-card', type: 'reveal-up', stagger: true, parent: '.offers-grid' },
     { selector: '.offers-section__cta, .offers-section__gift-bar', type: 'reveal-up', stagger: false },

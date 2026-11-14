@@ -154,6 +154,9 @@
   --color-slate-300: #cbd5e1;
   --color-slate-200: #e2e8f0;
   --color-slate-100: #f1f5f9;
+  --color-zalo-blue: #0068ff;
+  --color-ripple-phone: rgba(220, 24, 24, 0.42);
+  --color-ripple-zalo: rgba(0, 104, 255, 0.42);
 
   /* Gradients */
   --grad-hero-bg: radial-gradient(circle at 80% 25%, #d6ecff 0%, transparent 45%), linear-gradient(180deg, #f4f9ff 0%, #e6f2fe 60%, #f5faff 100%);
@@ -179,6 +182,8 @@
   --shadow-btn-outline: 0 6px 18px rgba(14, 100, 189, 0.1);
   --shadow-badge: 0 4px 12px rgba(11, 88, 168, 0.2);
   --shadow-pill: 0 2px 10px rgba(10, 56, 112, 0.08);
+  --shadow-floating-phone: 0 6px 18px rgba(220, 24, 24, 0.38);
+  --shadow-floating-zalo: 0 6px 18px rgba(0, 104, 255, 0.38);
 
   /* Borders */
   --border-thin: 1px solid var(--color-blue-200);
@@ -287,7 +292,12 @@
   --z-card-overlay: 2;
   --z-arrow: 5;
   --z-header: 100;
+  --z-floating: 95;
   --z-modal: 1000;
+  --size-floating-btn: 3.25rem;
+  --size-floating-btn-mobile: 2.875rem;
+  --size-floating-icon: 1.375rem;
+  --size-floating-icon-mobile: 1.25rem;
   --gallery-grid-gap: var(--space-6);
   --gallery-img-h: 14.5rem;
   --gallery-img-h-mobile: 10.5rem;
@@ -1068,6 +1078,8 @@ button {
   max-width: var(--size-full);
   height: auto;
   display: block;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card-strong);
 }
 
 .hero-trust-bar {
@@ -1151,6 +1163,10 @@ button {
   align-items: center;
   gap: var(--space-3-5);
   margin-bottom: var(--space-3-5);
+}
+
+.commitment-card__header:last-child {
+  margin-bottom: var(--space-0);
 }
 
 .commitment-card__icon {
@@ -1241,6 +1257,10 @@ button {
   margin-bottom: var(--space-4);
 }
 
+.service-card__head:last-child {
+  margin-bottom: var(--space-0);
+}
+
 .service-card__num {
   width: var(--srv-num-size);
   height: var(--srv-num-size);
@@ -1271,6 +1291,10 @@ button {
   background: var(--color-blue-50);
   padding: var(--space-3-5);
   border-radius: var(--radius-lg);
+}
+
+.service-card__wide-top:last-child {
+  margin-bottom: var(--space-0);
 }
 
 .service-card__wide-img {
@@ -2639,6 +2663,188 @@ button {
   color: var(--color-blue-100);
 }
 
+/* ==================== FLOATING QUICK CONTACT (HOTLINE & ZALO) ==================== */
+@keyframes phone-wiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  8%, 24% {
+    transform: rotate(-14deg) scale(1.08);
+  }
+  16%, 32% {
+    transform: rotate(14deg) scale(1.08);
+  }
+  40% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes zalo-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  12% {
+    transform: translateY(-3px) scale(1.08);
+  }
+  24% {
+    transform: translateY(0) scale(1);
+  }
+  36% {
+    transform: translateY(-2px) scale(1.04);
+  }
+  48% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float-ripple {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.48);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.48);
+    opacity: 0;
+  }
+}
+
+.floating-contact {
+  position: fixed;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  z-index: var(--z-floating);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3-5);
+  pointer-events: none;
+}
+
+.floating-contact__btn {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2-5);
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.floating-contact__btn:hover {
+  transform: translateY(var(--translate-hover-subtle));
+}
+
+.floating-contact__label {
+  background: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1-5) var(--space-3-5);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+}
+
+.floating-contact__btn--phone:hover .floating-contact__label {
+  border-color: var(--color-red-500);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.floating-contact__btn--zalo:hover .floating-contact__label {
+  border-color: var(--color-zalo-blue);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.floating-contact__sub {
+  font-size: var(--fs-2xs);
+  color: var(--color-slate-500);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-medium);
+}
+
+.floating-contact__main {
+  font-size: var(--fs-sm);
+  color: var(--color-navy-900);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-extrabold);
+}
+
+.floating-contact__icon-wrap {
+  position: relative;
+  width: var(--size-floating-btn);
+  height: var(--size-floating-btn);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-contact__pulse {
+  position: absolute;
+  inset: var(--space-0);
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+}
+
+.floating-contact__btn--phone .floating-contact__pulse {
+  background: var(--color-ripple-phone);
+  animation: float-ripple 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.floating-contact__btn--zalo .floating-contact__pulse {
+  background: var(--color-ripple-zalo);
+  animation: float-ripple 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  animation-delay: 1.2s;
+}
+
+.floating-contact__icon {
+  width: var(--size-floating-btn);
+  height: var(--size-floating-btn);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  position: relative;
+  z-index: var(--z-card-overlay);
+  transition: transform var(--transition-fast);
+}
+
+.floating-contact__btn--phone .floating-contact__icon {
+  background: var(--grad-btn-red);
+  box-shadow: var(--shadow-floating-phone);
+}
+
+.floating-contact__btn--zalo .floating-contact__icon {
+  background: var(--color-zalo-blue);
+  box-shadow: var(--shadow-floating-zalo);
+}
+
+.floating-contact__icon svg {
+  width: var(--size-floating-icon);
+  height: var(--size-floating-icon);
+}
+
+.floating-contact__btn--phone .floating-contact__icon svg {
+  animation: phone-wiggle 3s ease-in-out infinite;
+}
+
+.floating-contact__zalo-text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-black);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white);
+  line-height: var(--lh-none);
+  display: inline-block;
+  animation: zalo-bounce 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
 /* ==================== RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 1080px) {
   .hero-section__grid,
@@ -2949,5 +3155,35 @@ button {
   .gallery-lightbox__nav svg {
     width: var(--icon-sm);
     height: var(--icon-sm);
+  }
+
+  /* Mobile Floating Quick Contact */
+  .floating-contact {
+    right: calc(var(--space-3-5) + env(safe-area-inset-right, 0px));
+    bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+    gap: var(--space-2-5);
+  }
+
+  .floating-contact__label {
+    display: none;
+  }
+
+  .floating-contact__icon-wrap,
+  .floating-contact__icon {
+    width: var(--size-floating-btn-mobile);
+    height: var(--size-floating-btn-mobile);
+  }
+
+  .floating-contact__icon svg {
+    width: var(--size-floating-icon-mobile);
+    height: var(--size-floating-icon-mobile);
+  }
+
+  .floating-contact__zalo-text {
+    font-size: var(--fs-2xs);
+  }
+
+  .floating-contact__btn:active {
+    transform: scale(0.92);
   }
 }
